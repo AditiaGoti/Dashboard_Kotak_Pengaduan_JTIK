@@ -133,16 +133,16 @@
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
             >
               <div class="flex items-center mouse-pointer" @click="showModal = true">
-                <span class="mr-2 moderasi">Lihat Detail++</span>
+                <span class="mr-2 moderasi">Lihat Detail</span>
                 <div v-if="showModal">
                 <div class="modal-backdrop"></div>
                 <div class="modal">
-                  <div class="flex flex-row">
-                  <p class="text-xl font-bold	text-red-500 mb-6">Moderasi Tanggapan</p>
+                  <div class="flex flex-row justify-between">
+                  <p class="text-xl font-bold	text-red-500 mb-6">Detail Tanggapan</p>
                   <div>
                           <img
                             :src="close"
-                            class="h-3 w-3 cursor-pointer px-4 mx-4"
+                            class="h-8 w-8 cursor-pointer"
                             alt="..."
                             @click="closeModal"
                           />
@@ -187,7 +187,7 @@
         rounded-md
         bg-emerald-600	
         text-white
-        hover:bg-pink-500"> 
+        hover:bg-emerald-800"> 
               Edit Tanggapan
             </button>
             <button class="w-fit
@@ -199,7 +199,7 @@
         rounded-md
         bg-red-500
         text-white
-        hover:bg-pink-500">
+        hover:bg-red-800">
               Hapus Tanggapan
             </button>
           </footer>
@@ -239,6 +239,7 @@ export default {
       team2,
       team3,
       close,
+      showModal: false,
     };
   },
   components: {
@@ -255,3 +256,28 @@ export default {
   },
 };
 </script>
+<style>
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+td:hover .moderasi {
+  color: blue;
+  cursor: pointer;
+}
+</style>

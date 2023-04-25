@@ -7,6 +7,18 @@
         <div class="flex flex-wrap">
           <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
             <card-stats
+              statSubtitle="JUMLAH MODERASI KELUHAN"
+              statTitle="350,897"
+              statArrow="up"
+              statPercent="3.48"
+              statPercentColor="text-emerald-500"
+              statDescripiron="Since last month"
+              statIconName="far fa-chart-bar"
+              statIconColor="bg-red-500"
+            />
+          </div>
+          <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+            <card-stats
               statSubtitle="JUMLAH KELUHAN"
               statTitle="350,897"
               statArrow="up"

@@ -14,6 +14,12 @@ import App from "@/App.vue";
 
 import Admin from "@/layouts/Admin.vue";
 import Auth from "@/layouts/Auth.vue";
+import DashboardLayout from "@/layouts/DashboardLayout.vue";
+import LayoutAdmin from "@/layouts/LayoutAdmin.vue";
+import LayoutMahasiswa from "@/layouts/LayoutMahasiswa.vue";
+import LayoutKeluhan from "@/layouts/LayoutKeluhan.vue";
+import LayoutTanggapan from "@/layouts/LayoutTanggapan.vue";
+
 
 // views for Admin layout
 
@@ -24,6 +30,8 @@ import TableKeluhan from "@/views/admin/TableKeluhan.vue";
 import TableTanggapan from "@/views/admin/TableTanggapan.vue";
 import TableAdmin from "@/views/admin/TableAdmin.vue";
 import TableMahasiswa from "@/views/admin/TableMahasiswa.vue";
+import TambahMahasiswa from "@/views/admin/TambahMahasiswa.vue";
+import TambahAdmin from "@/views/admin/TambahAdmin.vue";
 
 // views for Auth layout
 
@@ -48,6 +56,29 @@ const routes = [
         path: "/admin/dashboard",
         component: Dashboard,
       },
+    ],
+  },
+  {
+    path: "/admin/TambahMahasiswa",
+    component: DashboardLayout,
+    children: [
+     
+      {
+        path: "/admin/TambahMahasiswa",
+        component: TambahMahasiswa,
+      },
+      
+      {
+        path: "/admin/TambahAdmin",
+        component: TambahAdmin,
+      },
+    ],
+  },
+  {
+    path: "/",
+    component: LayoutKeluhan,
+    children: [
+     
       {
         path: "/admin/keluhan",
         component: TableKeluhan,
@@ -56,6 +87,13 @@ const routes = [
         path: "/admin/moderasikeluhan",
         component: ModerasiKeluhan,
       },
+    ],
+  },
+  {
+    path: "/",
+    component: LayoutTanggapan,
+    children: [
+     
       {
         path: "/admin/tanggapan",
         component: TableTanggapan,
@@ -64,14 +102,28 @@ const routes = [
         path: "/admin/moderasitanggapan",
         component: ModerasiTanggapan,
       },
+    ],
+  },
+  {
+    path: "/",
+    component: LayoutMahasiswa,
+    children: [
       {
         path: "/admin/mahasiswa",
         component: TableMahasiswa,
       },
+      
+    ],
+  },
+  {
+    path: "/",
+    component: LayoutAdmin,
+    children: [
       {
         path: "/admin/admin",
         component: TableAdmin,
       },
+      
     ],
   },
   {
@@ -97,6 +149,7 @@ const routes = [
     path: "/profile",
     component: Profile,
   },
+
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 

@@ -132,17 +132,17 @@
                 <div v-if="showModal">
                 <div class="modal-backdrop"></div>
                 <div class="modal">
-                  <div class="flex flex-row">
-                  <p class="text-xl font-bold	text-red-500 mb-6">Moderasi Keluhan</p>
-                  <div @click="showModal = false">
+                  <div class="flex flex-row justify-between">
+                  <p class="text-xl font-bold	text-red-500 mb-6">Detail Tanggapan</p>
+                  <div>
                           <img
                             :src="close"
-                            class="h-3 w-3 cursor-pointer px-4 mx-4"
+                            class="h-8 w-8 cursor-pointer"
                             alt="..."
-                            
+                            @click="closeModal"
                           />
                   </div>
-                  </div>
+                  </div>  
                 <div class="grid grid-cols-2 mb-4" >
                     <div class="flex flex-col">
                       <div class="mr-4">

@@ -13,13 +13,18 @@
             Tabel Mahasiswa
           </h3>
         </div>
-      </div>
+  <router-link
+          to="/admin/TambahMahasiswa"
+          class="text-white bg-blue-500 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Tambah Pengguna
+        </router-link>      </div>
     </div>
     <div class="block w-full overflow-x-auto">
       <!-- Projects table -->
       <table class="items-center w-full bg-transparent border-collapse">
         <thead>
-          <tr>
+         <tr>
             <th
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
               :class="[
@@ -28,7 +33,7 @@
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             >
-              Project
+              Nama
             </th>
             <th
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -38,7 +43,7 @@
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             >
-              Budget
+              Email
             </th>
             <th
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -48,7 +53,7 @@
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             >
-              Status
+              Kelas
             </th>
             <th
               class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -58,26 +63,8 @@
                   : 'bg-emerald-800 text-emerald-300 border-emerald-700',
               ]"
             >
-              Users
+              Aksi
             </th>
-            <th
-              class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-              :class="[
-                color === 'light'
-                  ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                  : 'bg-emerald-800 text-emerald-300 border-emerald-700',
-              ]"
-            >
-              Completion
-            </th>
-            <th
-              class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-              :class="[
-                color === 'light'
-                  ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                  : 'bg-emerald-800 text-emerald-300 border-emerald-700',
-              ]"
-            ></th>
           </tr>
         </thead>
         <tbody>
@@ -96,377 +83,73 @@
                   color === 'light' ? 'text-blueGray-600' : 'text-white',
                 ]"
               >
-                Argon Design System
+              Aditia Goti              
               </span>
             </th>
             <td
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
             >
-              $2,500 USD
+              Aditia@gmail.com
             </td>
             <td
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
             >
-              <i class="fas fa-circle text-orange-500 mr-2"></i> pending
+              TI-CCIT
             </td>
             <td
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
             >
-              <div class="flex">
-                <img
-                  :src="team1"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
-                />
-                <img
-                  :src="team2"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team3"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team4"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <div class="flex items-center">
-                <span class="mr-2">60%</span>
-                <div class="relative w-full">
-                  <div
-                    class="overflow-hidden h-2 text-xs flex rounded bg-red-200"
-                  >
-                    <div
-                      style="width: 60%;"
-                      class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                    ></div>
-                  </div>
+             
+<!-- Modal toggle -->
+<div data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="mr-2 moderasi">
+  Lihat Detail
+</div>
+
+<!-- Main modal -->
+<div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Data Mahasiswa
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="grid grid-cols-2 my-4" >
+                    <div class="flex flex-col">
+                      <div class="mx-4">
+                      <p class="align-middle text-xs uppercase whitespace-nowrap font-semibold text-left"> ID </p>
+                        <p class="text-md mt-1 break-words whitespace-normal mb-5 "> 02439024932 </p>
+                        <p class="align-middle text-xs uppercase whitespace-nowrap font-semibold text-left"> Nama Pengguna </p>
+                        <p class="text-md mt-1 mb-5 break-words whitespace-normal"> Aditia Goti Pratama </p>
+                        <p class="align-middle text-xs uppercase whitespace-nowrap font-semibold text-left"> Kelas </p>
+                        <p class="text-md mt-1 break-words whitespace-normal"> TI-CCIT </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="align-middle text-xs uppercase whitespace-nowrap font-semibold text-left"> Kategori Keluhan </p>
+                        <p class="text-md mt-1 mb-5 break-words whitespace-normal">Fasilitas/Layanan</p>
+                        <p class="align-middle text-xs uppercase whitespace-nowrap font-semibold text-left"> Tujuan </p>
+                        <p class="text-md mt-1 mb-5">JTIK</p>
+                        <p class="align-middle text-xs uppercase whitespace-nowrap font-semibold text-left"> Waktu Pembuatan </p>
+                        <p class="text-md mt-1">13-04-2023, 11:59</p>
+                    </div>
                 </div>
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-            >
-              <table-dropdown />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-            >
-              <img
-                :src="angular"
-                class="h-12 w-12 bg-white rounded-full border"
-                alt="..."
-              />
-              <span
-                class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
-              >
-                Angular Now UI Kit PRO
-              </span>
-            </th>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              $1,800 USD
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <i class="fas fa-circle text-emerald-500 mr-2"></i>
-              completed
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <div class="flex">
-                <img
-                  :src="team1"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
-                />
-                <img
-                  :src="team2"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team3"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team4"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <div class="flex items-center">
-                <span class="mr-2">100%</span>
-                <div class="relative w-full">
-                  <div
-                    class="overflow-hidden h-2 text-xs flex rounded bg-emerald-200"
-                  >
-                    <div
-                      style="width: 100%;"
-                      class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-            >
-              <table-dropdown />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-            >
-              <img
-                :src="sketch"
-                class="h-12 w-12 bg-white rounded-full border"
-                alt="..."
-              />
-              <span
-                class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
-              >
-                Black Dashboard Sketch
-              </span>
-            </th>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              $3,150 USD
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <i class="fas fa-circle text-red-500 mr-2"></i> delayed
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <div class="flex">
-                <img
-                  :src="team1"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
-                />
-                <img
-                  :src="team2"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team3"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team4"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <div class="flex items-center">
-                <span class="mr-2">73%</span>
-                <div class="relative w-full">
-                  <div
-                    class="overflow-hidden h-2 text-xs flex rounded bg-red-200"
-                  >
-                    <div
-                      style="width: 73%;"
-                      class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-            >
-              <table-dropdown />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-            >
-              <img
-                :src="react"
-                class="h-12 w-12 bg-white rounded-full border"
-                alt="..."
-              />
-              <span
-                class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
-              >
-                React Material Dashboard
-              </span>
-            </th>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              $4,400 USD
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <i class="fas fa-circle text-teal-500 mr-2"></i> on schedule
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <div class="flex">
-                <img
-                  :src="team1"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
-                />
-                <img
-                  :src="team2"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team3"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team4"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <div class="flex items-center">
-                <span class="mr-2">90%</span>
-                <div class="relative w-full">
-                  <div
-                    class="overflow-hidden h-2 text-xs flex rounded bg-teal-200"
-                  >
-                    <div
-                      style="width: 90%;"
-                      class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-            >
-              <table-dropdown />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-            >
-              <img
-                :src="vue"
-                class="h-12 w-12 bg-white rounded-full border"
-                alt="..."
-              />
-              <span
-                class="ml-3 font-bold"
-                :class="[
-                  color === 'light' ? 'text-blueGray-600' : 'text-white',
-                ]"
-              >
-                React Material Dashboard
-              </span>
-            </th>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              $2,200 USD
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <i class="fas fa-circle text-emerald-500 mr-2"></i>
-              completed
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <div class="flex">
-                <img
-                  :src="team1"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
-                />
-                <img
-                  :src="team2"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team3"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-                <img
-                  :src="team4"
-                  alt="..."
-                  class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                />
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <div class="flex items-center">
-                <span class="mr-2">100%</span>
-                <div class="relative w-full">
-                  <div
-                    class="overflow-hidden h-2 text-xs flex rounded bg-emerald-200"
-                  >
-                    <div
-                      style="width: 100%;"
-                      class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-            >
-              <table-dropdown />
-            </td>
+            <!-- Modal footer -->
+            <div class="flex justify-end  p-3 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                <button data-modal-hide="defaultModal" type="button" class="text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Hapus Pengguna</button>
+                <button data-modal-hide="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Kembali</button>
+            </div>
+        </div>
+    </div>
+</div>
+            </td> 
           </tr>
         </tbody>
       </table>
@@ -474,7 +157,6 @@
   </div>
 </template>
 <script>
-import TableDropdown from "@/components/Dropdowns/TableDropdown.vue";
 
 import bootstrap from "@/assets/img/bootstrap.jpg";
 import angular from "@/assets/img/angular.jpg";
@@ -502,7 +184,6 @@ export default {
     };
   },
   components: {
-    TableDropdown,
   },
   props: {
     color: {
